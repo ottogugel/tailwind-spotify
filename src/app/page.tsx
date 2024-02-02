@@ -1,5 +1,6 @@
 import { AlbumMidMain } from "@/components/albumMidMain";
 import { AlbumTopMain } from "@/components/albumTopMain";
+import { Footer } from "@/components/footer";
 import { PlaylistAside } from "@/components/playlistAside";
 import { Home as HomeIcon, Search, Library, ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -65,20 +66,33 @@ export default function Home() {
             <AlbumTopMain title="Perfect Velvet" />
           </div>
 
-          <h2 className="font-bold text-2xl mt-10">Made for Otto Gugel</h2>
+          <h2 className="font-semibold text-2xl mt-10">Made for Otto Gugel</h2>
 
-          <div className="grid grid-cols-8 gap-4 mt-6">
-            <AlbumMidMain title="Daily Mix 1" artist="Wallows, COIN, girl in red and more" />
-            <AlbumMidMain title="Daily Mix 2" artist="Wallows, COIN, girl in red and more" />
-            <AlbumMidMain title="Daily Mix 3" artist="Wallows, COIN, girl in red and more" />
-            <AlbumMidMain title="Daily Mix 4" artist="Wallows, COIN, girl in red and more" />
-            <AlbumMidMain title="Daily Mix 5" artist="Wallows, COIN, girl in red and more"/>
+          <div className="grid grid-cols-8 gap-4 mt-4">
+            <AlbumMidMain
+              title="Daily Mix 1"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 2"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 3"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 4"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 5"
+              artist="Wallows, COIN, girl in red and more"
+            />
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 p-6">
-        footer
-      </footer>
+      <Footer />
     </div>
   );
 }

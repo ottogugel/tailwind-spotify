@@ -1,0 +1,24 @@
+/* Criar Projeto */ 
+
+npx create-next-app@latest --use-pnpm tailwind-spotify
+
+* caso der erro é necessário rodar npm install -g pnpm
+
+/* Sobre o Tailwindcss */
+
+* Tailwindcss (Framework de Css) é uma série de classes que podem ser adicionados em nossos componentes ou elementos do HTML e essas classes representam uma propriedade que pode ser adicionada ao CSS.
+
+- Seguir sempre esse padrão (guide lines) de estilos.
+- Bootstrap não é a mesma coisa de tailwindcss ambam seres classes porém no Bootstrap existem classes que adicionam multiplas estilizações e é facil reconhecer, já que são propria do bootstrap. Diferente do Tailwindcss onde não tem padronização, não tem uma classe, cada propriedade separadamente é preciso de uma classe css.
+- Ambos são framework de css
+
+
+/* Lucide */
+
+pnpm add lucide-react
+
+import {} from 'lucide-react
+
+https://www.youtube.com/watch?v=DAd01mYiURo
+
+movie midnight runners
