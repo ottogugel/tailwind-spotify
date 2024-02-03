@@ -10,9 +10,9 @@ export default function Home() {
       <div className="flex flex-1">
         <aside className="w-72 bg-zinc-950 p-6">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
-            <div className="w-3 h-3 bg-white rounded-full"></div>
-            <div className="w-3 h-3 bg-white rounded-full"></div>
+            <div className="size-2 bg-white rounded-full"></div>
+            <div className="size-2 bg-white rounded-full"></div>
+            <div className="size-2 bg-white rounded-full"></div>
           </div>
           <nav className="space-y-5 mt-10">
             <a
@@ -50,23 +50,27 @@ export default function Home() {
             <button className="rounded-full bg-black/40 p-1">
               <ChevronLeft />
             </button>
-            <button className="rounded-full bg-black/40 p-1">
+            <button className="rounded-full bg-black/40 p-1 text-zinc-500 cursor-not-allowed">
               <ChevronRight />
             </button>
           </div>
 
-          <h1 className="font-bold text-4xl mt-10">Good Afternoon</h1>
-
-          <div className="grid grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <AlbumTopMain title="Perfect Velvet" />
-            <AlbumTopMain title="Perfect Velvet" />
-            <AlbumTopMain title="Perfect Velvet" />
-            <AlbumTopMain title="Perfect Velvet" />
-            <AlbumTopMain title="Perfect Velvet" />
-            <AlbumTopMain title="Perfect Velvet" />
+            <AlbumTopMain title="Bloom" />
+            <AlbumTopMain title="Summer Magic" />
+            <AlbumTopMain title="READY TO BE" />
+            <AlbumTopMain title="Celebrate" />
+            <AlbumTopMain title="BETWEEN 1&2" />
           </div>
-
-          <h2 className="font-semibold text-2xl mt-10">Made for Otto Gugel</h2>
+          <div className="flex justify-between">
+            <h2 className="font-semibold text-2xl mt-10 cursor-pointer">
+              Made for Otto Gugel
+            </h2>
+            <h2 className="font-semibold text-base text-zinc-400 mt-10 hover:underline cursor-pointer">
+              Show all
+            </h2>
+          </div>
 
           <div className="grid grid-cols-8 gap-4 mt-4">
             <AlbumMidMain
@@ -87,6 +91,18 @@ export default function Home() {
             />
             <AlbumMidMain
               title="Daily Mix 5"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 6"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 7"
+              artist="Wallows, COIN, girl in red and more"
+            />
+            <AlbumMidMain
+              title="Daily Mix 8"
               artist="Wallows, COIN, girl in red and more"
             />
           </div>

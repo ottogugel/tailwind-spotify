@@ -1,3 +1,4 @@
+import { PlusCircle } from "lucide-react";
 import Image from "next/image";
 
 interface FooterAsideProps {
@@ -25,6 +26,7 @@ export function FooterAside(props: FooterAsideProps) {
           {props.artist}
         </a>
       </div>
+      <PlusCircle size={20} className="text-zinc-400 hover:text-white cursor-pointer"/>
     </div>
   );
 }

@@ -1,17 +1,23 @@
-import { Play, Repeat, Shuffle, SkipBack, SkipForward } from "lucide-react";
+import { Play, Repeat2, Shuffle, SkipBack, SkipForward } from "lucide-react";
 
 export function FooterMid() {
   return (
     <div className="flex items-center gap-6">
-      <Shuffle size={20} className="text-zinc-100 hover:text-zinc-400" />
-      <SkipBack size={20} className="text-zinc-100 hover:text-zinc-400" />
+      <Shuffle size={20} className="text-zinc-400 hover:text-white" />
+      <SkipBack
+        size={20}
+        className="text-zinc-400 hover:text-white fill-current"
+      />
 
-      <button className="w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white text-black">
-        <Play fill="bg-black" />
+      <button className="w-9 h-9 flex items-center justify-center pl-1 rounded-full bg-white text-black hover:scale-105">
+        <Play fill="black" />
       </button>
 
-      <SkipForward size={20} className="text-zinc-100 hover:text-zinc-400" />
-      <Repeat size={20} className="text-zinc-100 hover:text-zinc-400" />
+      <SkipForward
+        size={20}
+        className="text-zinc-400 hover:text-white fill-current"
+      />
+      <Repeat2 size={20} className="text-zinc-400 hover:text-white" />
     </div>
   );
 }

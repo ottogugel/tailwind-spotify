@@ -1,10 +1,11 @@
 import { Laptop2, LayoutList, Maximize2, Mic2,  Volume2 } from "lucide-react";
 import { FooterAside }  from "./footerAside";
 import { FooterMid } from "./footerMid";
+import { FooterEnd } from "./footerEnd";
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-800 border-t border-zinc-700 p-6 flex items-center justify-between">
+    <footer className="bg-zinc-800 border-t border-zinc-700 px-6 py-4 flex items-center justify-between">
       <FooterAside music="Peek-A-Boo" artist="Red Velvet" />
       {/* FOOTER MID */}
       <div className="flex flex-col items-center gap-2">
@@ -18,15 +19,9 @@ export function Footer() {
           <span className="text-xs text-zinc-400">2:10</span>
         </div>
       </div>
-      <div className="flex items-center gap-2">
-        <Mic2 size={20} />
-        <LayoutList size={20} />
-        <Laptop2 size={20} />
-        <div>
-          <Volume2 />
-          <div className="bg-zinc-200 w-40 h-1 rounded-full"></div>
-        </div>
-        <Maximize2 size={20} />
+      {/* FOOTER END ICONS */}
+      <div className="flex items-center gap-4">
+        <FooterEnd />
       </div>
     </footer>
   );
