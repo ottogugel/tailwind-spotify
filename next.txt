@@ -1,4 +1,4 @@
-/* Criar Projeto */ 
+/* Criar Projeto */
 
 npx create-next-app@latest --use-pnpm tailwind-spotify
 
@@ -18,7 +18,3 @@ npx create-next-app@latest --use-pnpm tailwind-spotify
 pnpm add lucide-react
 
 import {} from 'lucide-react
-
-https://www.youtube.com/watch?v=DAd01mYiURo
-
-movie midnight runners
