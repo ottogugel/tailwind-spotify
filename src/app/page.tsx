@@ -10,9 +10,9 @@ export default function Home() {
       <div className="flex flex-1">
         <aside className="w-72 bg-zinc-950 p-6">
           <div className="flex items-center gap-2">
-            <div className="size-2 bg-white rounded-full"></div>
-            <div className="size-2 bg-white rounded-full"></div>
-            <div className="size-2 bg-white rounded-full"></div>
+            <div className="size-3 bg-white rounded-full"></div>
+            <div className="size-3 bg-white rounded-full"></div>
+            <div className="size-3 bg-white rounded-full"></div>
           </div>
           <nav className="space-y-5 mt-10">
             <a
