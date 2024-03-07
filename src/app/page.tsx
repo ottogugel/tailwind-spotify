@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
+        <aside className="w-96 bg-zinc-950 p-6">
           <div className="flex items-center gap-2">
             <div className="size-3 bg-white rounded-full"></div>
             <div className="size-3 bg-white rounded-full"></div>
@@ -75,35 +75,34 @@ export default function Home() {
           <div className="grid grid-cols-8 gap-4 mt-4">
             <AlbumMidMain
               title="Daily Mix 1"
-              artist="Wallows, COIN, girl in red and more"
+              artist="Travis Scott, Metro Boomin, Post Malone..."
+              src="/dailymix1.jpg"
             />
             <AlbumMidMain
               title="Daily Mix 2"
-              artist="Wallows, COIN, girl in red and more"
+              artist="Red Velvet, TWICE, LE SSERAFIM and more"
+              src="/dailymix2.jpg"
             />
+
             <AlbumMidMain
               title="Daily Mix 3"
-              artist="Wallows, COIN, girl in red and more"
+              artist="Twenty One Pilots, Billie Eilish, Red Hot Chilli...."
+              src="/dailymix3.jpg"
             />
             <AlbumMidMain
               title="Daily Mix 4"
-              artist="Wallows, COIN, girl in red and more"
+              artist="GOT7, UKISS, SHINee and more"
+              src="/dailymix4.jpg"
             />
             <AlbumMidMain
               title="Daily Mix 5"
-              artist="Wallows, COIN, girl in red and more"
+              artist="The Weeknd, Daniel Caesar, Justin Bieber..."
+              src="/dailymix5.jpg"
             />
             <AlbumMidMain
               title="Daily Mix 6"
-              artist="Wallows, COIN, girl in red and more"
-            />
-            <AlbumMidMain
-              title="Daily Mix 7"
-              artist="Wallows, COIN, girl in red and more"
-            />
-            <AlbumMidMain
-              title="Daily Mix 8"
-              artist="Wallows, COIN, girl in red and more"
+              artist="Major Lazer, San Holo, Zedd and more"
+              src="/dailymix6.jpg"
             />
           </div>
         </main>

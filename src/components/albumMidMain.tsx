@@ -4,9 +4,10 @@ import Image from "next/image";
 interface AlbumMidProps {
   title: string;
   artist: string;
+  src: string;
 }
 
-export function AlbumMidMain(props: AlbumMidProps) {
+export function AlbumMidMain({title, artist, src}: AlbumMidProps) {
   return (
     <a
       href="#"
@@ -14,7 +15,7 @@ export function AlbumMidMain(props: AlbumMidProps) {
     >
       <div className="relative">
         <Image
-          src="/album.jpg"
+          src={src}
           width={120}
           height={120}
           className="w-full"
@@ -24,8 +25,8 @@ export function AlbumMidMain(props: AlbumMidProps) {
           <Play fill="bg-black" />
         </button>
       </div>
-      <strong className="font-semibold">{props.title}</strong>
-      <span className="text-xs text-zinc-400">{props.artist}</span>
+      <strong className="font-semibold">{title}</strong>
+      <span className="text-xs text-zinc-400">{artist}</span>
     </a>
   );
 }
