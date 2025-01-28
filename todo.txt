@@ -1,5 +1,4 @@
-- Fazer a função para que ao clicar no botão do Play do footer mid ele mude para o STOP.
 - Fazer a função para que quando clique nos icones (Repeat eShuffle) ficar verde com um ponto verde em baixo
 - Fazer o routes para navegar entre a página home, search, your library
-- Fazer integração com a base de dados para salvar as imagens (Prisma)
+- Fazer integração com a base de dados para salvar as imagens e músicas (Prisma)
 - Fazer a interface mais recente 2024 do spotify.

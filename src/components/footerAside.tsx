@@ -1,5 +1,7 @@
+'use client'
 import { PlusCircle } from "lucide-react";
 import Image from "next/image";
+import AddToFavorites from "./ui/favorite";
 
 interface FooterAsideProps {
   music: string;
@@ -26,7 +28,7 @@ export function FooterAside(props: FooterAsideProps) {
           {props.artist}
         </a>
       </div>
-      <PlusCircle size={20} className="text-zinc-400 hover:text-white cursor-pointer"/>
+      <AddToFavorites />
     </div>
   );
 }

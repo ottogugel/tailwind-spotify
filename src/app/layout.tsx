@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Spotify",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-zinc-900 text-zinc-50">{children}</body>
+      <body className="bg-zinc-900 text-zinc-50">
+        {" "}
+        <Toaster position="top-center" />
+        {children}
+      </body>
     </html>
   );
 }
