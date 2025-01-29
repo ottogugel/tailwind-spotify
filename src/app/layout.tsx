@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-zinc-900 text-zinc-50">
+      <body className="bg-black text-zinc-50">
         {" "}
         <Toaster position="top-center" />
         {children}
