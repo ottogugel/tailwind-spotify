@@ -14,11 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-zinc-50">
-        {" "}
-        <Toaster position="top-center" />
-        {children}
-      </body>
+      <Toaster position="bottom-center" />
+      <body className="bg-black text-zinc-50">{children}</body>
     </html>
   );
 }

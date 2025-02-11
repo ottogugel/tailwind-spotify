@@ -11,9 +11,9 @@ const AddToFavorites = () => {
 
     // Exibe a notificação com base no estado
     if (newState) {
-      toast.success("Música adicionada aos favoritos!"); // Notificação de sucesso
+      toast.success(`Added to Liked Songs. `,); // Notificação de sucesso
     } else {
-      toast.info("Música removida dos favoritos."); // Notificação de informação
+      toast.info("Removed from Liked Songs."); // Notificação de informação
     }
   };
 
