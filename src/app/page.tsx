@@ -4,8 +4,9 @@ import { AlbumTopMain } from "@/components/albumTopMain";
 import { Footer } from "@/components/footer";
 import { TopBar } from "@/components/TopBar";
 import { ChevronRight, Plus, Library } from "lucide-react";
-import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PlaylistItems } from "@/components/playlistItems";
+import { AlbumMid } from "@/components/albummid";
 
 export default function Home() {
   // Estado para controlar se o conteúdo está carregando
@@ -48,37 +49,32 @@ export default function Home() {
             </div>
 
             <div className="flex gap-1">
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-800 rounded-full text-white">
+              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
                 Playlists
               </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-800 rounded-full text-white text-nowrap">
+              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white text-nowrap">
                 Podcasts e cursos
               </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-800 rounded-full text-white">
+              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
                 Álbuns
               </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-800 rounded-full text-white">
+              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
                 Artistas
               </button>
             </div>
 
             {/* Playlist Items */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3 hover:bg-zinc-800 p-2 rounded-md cursor-pointer">
-                <Image
-                  src="/playlist-cover.jpg"
-                  alt="Playlist"
-                  width={48}
-                  height={48}
-                  className="rounded"
-                />
-                <div>
-                  <p className="text-white font-semibold">Músicas Curtidas</p>
-                  <p className="text-sm text-zinc-400">
-                    Playlist • 1,197 músicas
-                  </p>
-                </div>
-              </div>
+              <PlaylistItems
+                name="Músicas Curtidas"
+                description="Playlist • 1,197 músicas"
+              />
+              <PlaylistItems
+                name="Hip-Hop"
+                description="Playlist • 197 músicas"
+              />
+              <PlaylistItems name="Rap" description="Playlist • 567 músicas" />
+              <PlaylistItems name="Indie" description="Playlist • 50 músicas" />
             </div>
           </div>
         </aside>
@@ -176,6 +172,12 @@ export default function Home() {
                   )}
                 </div>
               </div>
+            </div>
+
+            {/* Cards */}
+            <div>
+              <a className="text-lg font-bold ml-4">Made for Sladost</a>
+                <AlbumMid />
             </div>
           </div>
         </main>

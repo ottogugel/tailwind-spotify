@@ -9,7 +9,7 @@ export function AlbumTopMain(props: AlbumProps) {
   return (
     <a
       href="#"
-      className="bg-white/5 group rounded-md flex items-center gap-3 overflow-hidden hover:bg-white/10 transition-colors"
+      className="bg-white/5 group rounded-md flex items-center gap-3 overflow-hidden hover:bg-white/10 transition-colors w-[300px]"
     >
       <Image
         src="/album.jpg"

@@ -18,3 +18,7 @@ npx create-next-app@latest --use-pnpm tailwind-spotify
 pnpm add lucide-react
 
 import {} from 'lucide-react
+
+/* HTML */
+
+<abbr></abbr> - para colocar tipo informação ao passar o mouse sobre.
