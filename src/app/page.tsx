@@ -1,24 +1,25 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import { AlbumTopMain } from "@/components/albumTopMain";
 import { Footer } from "@/components/footer";
 import { TopBar } from "@/components/TopBar";
-import { ChevronRight, Plus, Library } from "lucide-react";
+import { ChevronRight, Plus, Library, ChevronLeft } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PlaylistItems } from "@/components/playlistItems";
-import { AlbumMid } from "@/components/albummid";
+import { AlbumMid } from "@/components/albumMid";
+import { Category } from "@/components/category";
+import { CategoryAside } from "@/components/categoryAisde";
+import VideoMid from "@/components/videoMid";
 
 export default function Home() {
-  // Estado para controlar se o conteúdo está carregando
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simula um carregamento de dados ao recarregar a página
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Tempo de 2 segundos para simular um fetch de dados
+    }, 2000);
 
-    return () => clearTimeout(timer); // Cleanup para evitar memory leaks
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -26,9 +27,9 @@ export default function Home() {
       {/* Top Bar */}
       <TopBar />
 
-      {/* Main Content */}
-      <div className="flex flex-1">
-        {/* Sidebar */}
+      {/* Layout principal com sidebar, conteúdo e novo aside */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Sidebar esquerdo */}
         <aside className="w-80 bg-black p-6">
           <div className="flex flex-col gap-6">
             <div className="flex items-center justify-between">
@@ -48,20 +49,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-1">
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
-                Playlists
-              </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white text-nowrap">
-                Podcasts e cursos
-              </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
-                Álbuns
-              </button>
-              <button className="px-3 py-1 text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 rounded-full text-white">
-                Artistas
-              </button>
-            </div>
+            <CategoryAside />
 
             {/* Playlist Items */}
             <div className="space-y-4">
@@ -79,94 +67,34 @@ export default function Home() {
           </div>
         </aside>
 
-        {/* Main Content Area */}
-        <main className="flex-1 p-6 bg-gradient-to-b from-purple-900 to-zinc-900">
+        {/* Área principal com rolagem interna */}
+        <main className="flex-1 p-6 bg-gradient-to-b from-purple-900 to-zinc-900 overflow-y-auto">
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-1">
-              <button className="px-3 py-1 text-xs font-normal bg-white rounded-full text-zinc-800">
-                All
-              </button>
-              <button className="px-3 py-1 text-xs font-normal bg-white/40 rounded-full text-zinc-100">
-                Song
-              </button>
-              <button className="px-3 py-1 text-xs font-normal bg-white/40 rounded-full text-zinc-100">
-                Podcasts
-              </button>
-            </div>
+            <Category />
 
-            <div className="flex gap-4">
+            {/* Lista de álbuns */}
+            <div className="flex gap-4 ">
               <div className="p-6 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   {isLoading ? (
-                    // Exibe o skeleton enquanto os dados carregam
                     <>
-                      <div className="flex items-center space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
+                      {[...Array(8)].map((_, i) => (
+                        <div key={i} className="flex items-center space-x-4">
+                          <Skeleton className="h-12 w-12 rounded-full" />
+                          <div className="space-y-2">
+                            <Skeleton className="h-4 w-[250px]" />
+                            <Skeleton className="h-4 w-[200px]" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center flex-wrap-reverse space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center flex-wrap-reverse space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center flex-wrap-reverse space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
-                      <div className="flex items-center flex-wrap-reverse space-x-4">
-                        <Skeleton className="h-12 w-12 rounded-full" />
-                        <div className="space-y-2">
-                          <Skeleton className="h-4 w-[250px]" />
-                          <Skeleton className="h-4 w-[200px]" />
-                        </div>
-                      </div>
+                      ))}
                     </>
                   ) : (
-                    // Exibe os álbuns após o carregamento
                     <>
                       <AlbumTopMain title="Perfect Velvet" />
                       <AlbumTopMain title="Bloom" />
                       <AlbumTopMain title="Summer Magic" />
                       <AlbumTopMain title="READY TO BE" />
                       <AlbumTopMain title="Celebrate" />
-                      <AlbumTopMain title="BETWEEN 1&2" />
-                      <AlbumTopMain title="BETWEEN 1&2" />
                       <AlbumTopMain title="BETWEEN 1&2" />
                     </>
                   )}
@@ -176,12 +104,44 @@ export default function Home() {
 
             {/* Cards */}
             <div>
-              <a className="text-lg font-bold ml-4">Made for Sladost</a>
-                <AlbumMid />
+              {isLoading ? (
+                <div className="flex flex-wrap">
+                    <div className="flex items-center space-x-4 p-4">
+                      <Skeleton className="size-44" />
+                      <div className="space-y-2">
+                        <Skeleton className="h-4 w-[250px]" />
+                        <Skeleton className="h-4 w-[200px]" />
+                      </div>
+                    </div>
+                </div>
+              ) : (
+                <>
+                  <div className="flex justify-between items-center px-4">
+                    <h2 className="text-lg font-bold">Made for Sladost</h2>
+                    <button className="text-sm text-zinc-400 hover:text-white">
+                      Show all
+                    </button>
+                  </div>
+                  <AlbumMid />
+                </>
+              )}
+            </div>
+
+            {/* Videoclipes */}
+            <div>
+              <VideoMid />
             </div>
           </div>
         </main>
+
+        {/* Novo aside no lado direito */}
+        <aside className="w-16 bg-black p-6 hidden lg:block overflow-y-auto">
+          <div className="flex items-center justify-center h-full">
+            <ChevronLeft className="text-zinc-200" />
+          </div>
+        </aside>
       </div>
+
       <Footer />
     </div>
   );
