@@ -6,7 +6,7 @@ import { TopBar } from "@/components/TopBar";
 import { ChevronRight, Plus, Library, ChevronLeft } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PlaylistItems } from "@/components/playlistItems";
-import { AlbumMid } from "@/components/albumMid";
+import { AlbumMid } from "@/components/albummid";
 import { Category } from "@/components/category";
 import { CategoryAside } from "@/components/categoryAisde";
 import VideoMid from "@/components/videoMid";
