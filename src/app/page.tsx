@@ -54,15 +54,23 @@ export default function Home() {
             {/* Playlist Items */}
             <div className="space-y-4">
               <PlaylistItems
+                img={"/album.jpg"}
                 name="Músicas Curtidas"
                 description="Playlist • 1,197 músicas"
               />
               <PlaylistItems
+                img={"/album.jpg"}
                 name="Hip-Hop"
                 description="Playlist • 197 músicas"
               />
-              <PlaylistItems name="Rap" description="Playlist • 567 músicas" />
-              <PlaylistItems name="Indie" description="Playlist • 50 músicas"/>
+              <PlaylistItems
+                img={"/album.jpg"}
+                name="Rap"
+                description="Playlist • 567 músicas" />
+              <PlaylistItems
+                img={"/indie.png"}
+                name="Indie"
+                description="Playlist • 50 músicas" />
             </div>
           </div>
         </aside>
