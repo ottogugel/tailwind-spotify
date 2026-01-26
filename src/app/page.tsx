@@ -62,7 +62,7 @@ export default function Home() {
                 description="Playlist • 197 músicas"
               />
               <PlaylistItems name="Rap" description="Playlist • 567 músicas" />
-              <PlaylistItems name="Indie" description="Playlist • 50 músicas" />
+              <PlaylistItems name="Indie" description="Playlist • 50 músicas"/>
             </div>
           </div>
         </aside>
@@ -74,8 +74,8 @@ export default function Home() {
 
             {/* Lista de álbuns */}
             <div className="flex gap-4 ">
-              <div className="p-6 rounded-lg">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="p-6 rounded-lg w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {isLoading ? (
                     <>
                       {[...Array(8)].map((_, i) => (
@@ -106,13 +106,13 @@ export default function Home() {
             <div>
               {isLoading ? (
                 <div className="flex flex-wrap">
-                    <div className="flex items-center space-x-4 p-4">
-                      <Skeleton className="size-44" />
-                      <div className="space-y-2">
-                        <Skeleton className="h-4 w-[250px]" />
-                        <Skeleton className="h-4 w-[200px]" />
-                      </div>
+                  <div className="flex items-center space-x-4 p-4">
+                    <Skeleton className="size-44" />
+                    <div className="space-y-2">
+                      <Skeleton className="h-4 w-[250px]" />
+                      <Skeleton className="h-4 w-[200px]" />
                     </div>
+                  </div>
                 </div>
               ) : (
                 <>
@@ -129,7 +129,21 @@ export default function Home() {
 
             {/* Videoclipes */}
             <div>
-              <VideoMid />
+              {isLoading ? (
+                <div className="flex flex-wrap">
+                  <div className="flex items-center space-x-4 p-4">
+                    <Skeleton className="size-44" />
+                    <div className="space-y-2">
+                      <Skeleton className="h-4 w-[250px]" />
+                      <Skeleton className="h-4 w-[200px]" />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <VideoMid />
+                </>
+              )}
             </div>
           </div>
         </main>
