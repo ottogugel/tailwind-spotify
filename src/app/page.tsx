@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AlbumTopMain } from "@/components/albumTopMain";
 import { Footer } from "@/components/footer";
 import { TopBar } from "@/components/TopBar";
-import { ChevronRight, Plus, Library, ChevronLeft } from "lucide-react";
+import { ChevronRight, Plus, Library, ChevronLeft, Heart } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PlaylistItems } from "@/components/playlistItems";
 import { AlbumMid } from "@/components/albummid";
@@ -54,21 +54,21 @@ export default function Home() {
             {/* Playlist Items */}
             <div className="space-y-4">
               <PlaylistItems
-                img={"/album.jpg"}
+                img={"/favsongs.jpg"}
                 name="Músicas Curtidas"
                 description="Playlist • 1,197 músicas"
               />
               <PlaylistItems
-                img={"/album.jpg"}
+                img={"/hiphop.jpg"}
                 name="Hip-Hop"
                 description="Playlist • 197 músicas"
               />
               <PlaylistItems
-                img={"/album.jpg"}
+                img={"/rap.jpg"}
                 name="Rap"
                 description="Playlist • 567 músicas" />
               <PlaylistItems
-                img={"/indie.png"}
+                img={"/indie.jpg"}
                 name="Indie"
                 description="Playlist • 50 músicas" />
             </div>
