@@ -1,9 +1,10 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { AlbumTopMain } from "@/components/albumTopMain";
 import { Footer } from "@/components/footer";
 import { TopBar } from "@/components/TopBar";
-import { ChevronRight, Plus, Library, ChevronLeft, Heart } from "lucide-react";
+import { ChevronRight, Plus, Library, ChevronLeft, Home as HomeIc, Search } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PlaylistItems } from "@/components/playlistItems";
 import { AlbumMid } from "@/components/albummid";
@@ -24,21 +25,38 @@ export default function Home() {
 
   return (
     <div className="h-screen flex flex-col bg-zinc-900">
-      {/* Top Bar */}
-      <TopBar />
-
-      {/* Layout principal com sidebar, conteúdo e novo aside */}
+     {/* Layout principal com sidebar, conteúdo e novo aside */}
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar esquerdo */}
         <aside className="w-80 bg-black p-6">
           <div className="flex flex-col gap-6">
+            <div className="space-y-6">
+              {/* Ícone Home com texto */}
+              <div className="flex items-center gap-2">
+                <div className="p-2 bg-zinc-800 rounded-full">
+                  <HomeIc className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-white font-semibold">Home</span>
+              </div>
+              
+              {/* Input de busca */}
+              <div className="flex items-center bg-zinc-800 rounded-full px-4 h-12">
+                <Search className="w-5 h-5 text-zinc-400 mr-2" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="bg-transparent text-sm text-white placeholder:text-zinc-400 outline-none flex-1"
+                />
+              </div>
+            </div>
+            
             <div className="flex items-center justify-between">
-              <span>
-                <Library />
-              </span>
-              <span className="text-zinc-200 font-semibold">
-                Sua Biblioteca
-              </span>
+              <div className="flex items-center gap-2">
+                <Library className="w-5 h-5 text-zinc-200" />
+                <span className="text-zinc-200 font-semibold">
+                  Sua Biblioteca
+                </span>
+              </div>
               <div className="flex gap-2">
                 <button className="p-2 hover:bg-zinc-800 rounded-full">
                   <Plus className="w-5 h-5 text-zinc-200" />
@@ -77,7 +95,9 @@ export default function Home() {
 
         {/* Área principal com rolagem interna */}
         <main className="flex-1 p-6 bg-gradient-to-b from-purple-900 to-zinc-900 overflow-y-auto">
+          
           <div className="flex flex-col gap-6">
+            <TopBar />
             <Category />
 
             {/* Lista de álbuns */}
@@ -155,13 +175,6 @@ export default function Home() {
             </div>
           </div>
         </main>
-
-        {/* Novo aside no lado direito */}
-        <aside className="w-16 bg-black p-6 hidden lg:block overflow-y-auto">
-          <div className="flex items-center justify-center h-full">
-            <ChevronLeft className="text-zinc-200" />
-          </div>
-        </aside>
       </div>
 
       <Footer />
