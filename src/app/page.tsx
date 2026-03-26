@@ -9,7 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { PlaylistItems } from "@/components/playlistItems";
 import { AlbumMid } from "@/components/albummid";
 import { Category } from "@/components/category";
-import { CategoryAside } from "@/components/categoryAisde";
+import { CategoryAside } from "@/components/categoryAside";
 import VideoMid from "@/components/videoMid";
 
 export default function Home() {
